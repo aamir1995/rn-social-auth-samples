@@ -1,0 +1,3 @@
+rootProject.name = 'rnSocialAuthSamples'
+
+include ':app'
