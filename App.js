@@ -15,7 +15,7 @@ import {
 /**
  * COMPONENTS
  */
-import { FullScreenLinearGradient, height } from '@components';
+import { FullScreenLinearGradient, height, FacebookLogin } from '@components';
 
 export default class App extends Component {
 
@@ -24,14 +24,25 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.mainContainer}>
+
         <StatusBar translucent={true} backgroundColor="transparent" />
+
         <FullScreenLinearGradient />
+
         <View style={{ position: 'relative', top: height / 8, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Text style={styles.mainHeading}>{`React Native \n Social Auth Samples`}</Text>
+
+          {/* BUTTONS GROUP VIEW */}
+          <View style={{ marginTop: 15 }}>
+            <FacebookLogin />
+          </View>
+
         </View>
+
         <View style={styles.footerView}>
           <Text style={{ textAlign: 'center', color: '#fff', fontSize: 12 }}>About</Text>
         </View>
+        
       </View >
     );
   }
